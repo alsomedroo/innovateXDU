@@ -1,9 +1,11 @@
 {
-  "name": "backend-test",
+  "name": "my-fullstack-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
+    "build": "concurrently \"npm run build --workspace frontend\" \"npm run build --workspace backend\"",
+    "start": "concurrently \"npm run start --workspace frontend\" \"npm run start --workspace backend\""
   },
   "keywords": [],
   "author": "",
